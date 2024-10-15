@@ -13,11 +13,11 @@ def decryption(cipher_text,shift_key): #hello h=7
     cipher_text=""
     for char in cipher_text:
         position=letters.index(char)
-        new_position=position + shift_key
-        cipher_text += letters[new_position]
+        new_position=position - shift_key
+        plain_text += letters[new_position]
     print(f"Here is the text after encryption: {cipher_text}")
         
-
+0
 
 what_to_do=input("Type 'encrypt' for encryption,type 'decrypt' for decryption")
 text=input("Type your message:\n")
