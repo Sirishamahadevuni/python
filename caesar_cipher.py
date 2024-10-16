@@ -10,19 +10,23 @@ def encrption(plain_text,shift_key): #hello h=7
     print(f"Here is the text after encryption: {cipher_text}")
 
 def decryption(cipher_text,shift_key): #hello h=7
-    cipher_text=""
+    plain_text=""
     for char in cipher_text:
         position=letters.index(char)
         new_position=position - shift_key
         plain_text += letters[new_position]
-    print(f"Here is the text after encryption: {cipher_text}")
+    print(f"Here is the text after encryption: {plain_text}")
+wanna_end=False        
+while not wanna_end:
+    what_to_do=input("Type 'encrypt' for encryption,type 'decrypt' for decryption: ")
+    text=input("Type your message:\n")
+    shift=int(input("Enter shift key:\n"))
+    if what_to_do=="encrypt":
+        encrption(plain_text=text,shift_key=shift)
+    elif what_to_do=="decrypt":
+        decryption(cipher_text=text,shift_key=shift)
+    play_again=input("Type 'Yes' To play again or else 'No'")
+    if play_again=='No':
+        wanna_end=True
+        print("Have a Nice Day See You next Time!!")
         
-0
-
-what_to_do=input("Type 'encrypt' for encryption,type 'decrypt' for decryption")
-text=input("Type your message:\n")
-shift=int(input("Enter shift key:\n"))
-if what_to_do=="encrypt":
-    encrption(plain_text=text,shift_key=shift)
-elif what_to_do=="decrypt":
-    decryption(cipher_text=text,shift_key=shift)
