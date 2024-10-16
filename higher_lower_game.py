@@ -6,7 +6,11 @@ def sub(a,b):
 def mul(a,b):
     return a*b
 def div(a,b):
-    return a/b
+    try:
+        return a/b
+    except ZeroDivisionError:
+        print("Division by zero is not defined!!!")
+    return "infinity"
 operations_dict={
     "+":add,
     "-":sub,
